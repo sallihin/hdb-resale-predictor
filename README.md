@@ -1,5 +1,11 @@
 # hdb-resale-predictor
-HDB Resale Price Predictor using Gradient Boosting Regressor
+This HDB Resale Price Predictor uses Gradient Boosting Regressor to predict current and future price trends. The model uses HDB resale transactions dataset from the past 5 years, made available via [Data.gov.sg](https://data.gov.sg/). The model's accuracy is 96.59%. 
+
+### Method
+* The model uses the popular Ensemble Learning method, Gradient Boosting Regressor
+* For hyperparameter tuning, I initially tested with GridSearchCV, which was unsuccessful
+* Subsequently, I ran RandomSearchCV over 9 hours to achieve 96% accuracy
+* The model is then exported into a PKL file for front-end integration
 
 ### Key Learnings 
 * GridSearchCV took a very long time despite Colab Pro+ Subscription and exceeded 24 hours runtime limit.
